@@ -22,7 +22,7 @@ static struct zmk_widget_caps_word_indicator caps_word_indicator_widget;
 lv_obj_t *zmk_display_status_screen() {
     lv_obj_t *screen;
     screen = lv_obj_create(NULL);
-    lv_obj_set_style_bg_color(screen, lv_color_hex(0xFFFFFF), LV_PART_MAIN);
+    lv_obj_set_style_bg_color(screen, lv_color_hex(0x000000), LV_PART_MAIN);
     lv_obj_set_style_bg_opa(screen, 255, LV_PART_MAIN);
 
 #ifdef CONFIG_DT_HAS_ZMK_BEHAVIOR_CAPS_WORD_ENABLED
