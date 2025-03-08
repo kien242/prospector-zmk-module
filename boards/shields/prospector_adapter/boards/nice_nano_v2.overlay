@@ -101,12 +101,18 @@ disp_spi: &spi1 {
     pinctrl-1 = <&i2c0_sleep>;
     pinctrl-names = "default", "sleep";
 
-   apds9960: apds9960@39 {
-       compatible = "avago,apds9960";
-       status = "okay";
-       reg = <0x39>;
-       int-gpios = <&pro_micro 8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-   };
+//   apds9960: apds9960@39 {
+//       compatible = "avago,apds9960";
+//       status = "okay";
+//       reg = <0x39>;
+//       int-gpios = <&pro_micro 8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+//   };
+
+    bh1750:bh1750@23 {
+        status = "okay";
+        compatible = "rohm,bh1750";
+        reg = <0x23>;
+    }
 };
 
 &pwm1 {
