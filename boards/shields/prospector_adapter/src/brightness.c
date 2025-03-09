@@ -105,10 +105,10 @@ extern void als_thread(void *d0, void *d1, void *d2) {
             LOG_ERR("Cannot read ALS data.\n");
         }
 
-        // LOG_INF("ambient light intensity %d", intensity.val1);
+        LOG_INF("ambient light intensity %d", intensity.val1);
 
         mapped_brightness = map_light_to_pwm(intensity.val1);
-        // LOG_INF("NORMAL: mapped PWM duty cycle %d\n", mapped_brightness);
+        LOG_INF("NORMAL: mapped PWM duty cycle %d\n", mapped_brightness);
 
         if (abs(mapped_brightness - current_brightness) > FADE_THRESHOLD) {
             uint8_t integrator = 0;
