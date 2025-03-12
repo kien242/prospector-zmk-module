@@ -57,7 +57,7 @@ int zmk_widget_caps_word_indicator_init(struct zmk_widget_caps_word_indicator *w
 
     sys_slist_append(&widgets, &widget->node);
 
-    widget_caps_word_indicator_init();
+    // widget_caps_word_indicator_init();
     return 0;
 }
 
